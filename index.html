@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<htmls>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-200">
+    <header>
+        <div class="flex items-center justify-center bg-purple-600 p-5">
+            <h1 class="font-bold text-lg text-white">Movie Search APP</h1>
+        </div>
+    </header>
+    <main>
+        <div class="my-4 flex flex-row justify-center items-center ">
+            
+            <input type="text" 
+             id="search"
+             name="searchTxt" placeholder="Search for a movie..." class="border rounded-lg p-4">
+             <button class="mx-3 p-3 text-white bg-purple-500 font-bold rounded-lg" onclick="onMovieSearch()">Search</button>
+        </div>
+        <div id="movieGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4"></div>
+    </main>
+   <script src="./script.js"></script>
+</body>
+</html>
