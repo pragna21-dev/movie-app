@@ -67,7 +67,7 @@ movieGrid.addEventListener("click", (e) => {
 });
 
 function saveFavouriteToggle(movieId) {
-  if (favourites.includes(movieId)) {
+  if (favourites.some((item) => item.imdbID == movieId)) {
     favourites = favourites.filter((item) => item.imdbID !== movieId); //remove from favourites
   } else {
     const favMovie = movieSearchData.find((item) => item.imdbID == movieId);
