@@ -14,16 +14,20 @@
       </div>
     </header>
     <main>
-      <div>
-        <h1 class="text-white text-xl font-bold py-3 px-5">Recently Released</h1>
-        <div id="movieRecentGrid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6"></div>
-      </div>
       <div class="my-4 flex flex-row justify-center items-center">
-        <input type="text" id="search" name="searchTxt" placeholder="Search for a movie..." class="border border-gray-500 rounded-lg p-3" />
+        <input type="text" id="search" name="searchTxt" placeholder="Search for a movie..." class="border border-purple-500 rounded-lg p-3 bg-white" />
         <button class="mx-3 p-3 text-white bg-purple-900 font-bold rounded-lg" onclick="onMovieSearch()">Search</button>
         <a class="mx-3 p-3 text-white bg-purple-900 font-bold rounded-lg" href="favourite.html"> <i class="fa-regular fa-heart"></i> Favourites</a>
       </div>
       <div id="movieGrid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6"></div>
+      <div>
+        <h1 class="text-white text-xl font-bold py-3 px-5">Recently Released</h1>
+        <div id="movieRecentGrid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6"></div>
+      </div>
+      <div>
+        <h1 class="text-white text-xl font-bold py-3 px-5">Action Movies</h1>
+        <div id="movieActionGrid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6"></div>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>
