@@ -19,19 +19,25 @@ async function onMovieSearch() {
 
 async function getSearchMovieApi(query) {
   //key=f2125cab
-  movieGrid.innerHTML = "";
-  try {
-    const response = await fetch(`${API_URL}s=${query}`);
-    const data = await response.json();
-    if (data.Response === "True") {
-      return data.Search;
-    } else {
-      throw new Error(data.Error);
+
+  if (query == "") {
+    movieGrid.innerHTML = "";
+    movieGrid.innerHTML = `<p class="text-red-500 m-auto bg-red-100">Enter text for search </p>`;
+  } else {
+    movieGrid.innerHTML = "";
+    try {
+      const response = await fetch(`${API_URL}s=${query}`);
+      const data = await response.json();
+      if (data.Response === "True") {
+        return data.Search;
+      } else {
+        throw new Error(data.Error);
+      }
+    } catch (error) {
+      movieGrid.innerHTML = `<p class="text-red-500 m-auto bg-red-100">${error} </p>`;
+      console.error("Error is", error);
+      return null;
     }
-  } catch (error) {
-    movieGrid.innerHTML = `<p class="text-red-500 m-auto bg-red-100">${error} </p>`;
-    console.error("Error is", error);
-    return null;
   }
 }
 async function getRecentMovieApi() {
