@@ -2,7 +2,7 @@ const favGrid = document.getElementById("favGrid");
 let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
 function showFavourite() {
-  if (favourites) {
+  if (favourites && favourites.length > 0) {
     favGrid.innerHTML = favourites
       .map((favMovie) => {
         return `
@@ -23,12 +23,9 @@ function showFavourite() {
       })
       .join("");
   } else {
-    h2 = document.createElement("h2");
-    h2.textContent = "No Favourite Data";
-    favGrid.append(h2);
+    favGrid.innerHTML = `<p class="text-red-500 m-auto bg-red-100 mt-5 px-5 py-2"> No Favourite Data Found </p>`;
   }
 }
-showFavourite();
 
 favGrid.addEventListener("click", (e) => {
   //use event delegation bubbling
@@ -45,3 +42,5 @@ function saveFavouriteToggle(movieId) {
   localStorage.setItem("favourites", JSON.stringify(favourites));
   showFavourite();
 }
+
+showFavourite();

@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<htmls>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Search App</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
-</head>
-<body class="bg-gray-200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body class="bg-black">
     <header>
-        <div class="flex items-center justify-center bg-purple-900 p-5">
-            <h1 class="font-bold text-lg text-white">Movie Search APP</h1>
-        </div>
+      <div class="flex items-center justify-center bg-purple-900 p-5">
+        <h1 class="font-bold text-lg text-white">Movie Search APP</h1>
+      </div>
     </header>
     <main>
-        <div class="my-4 flex flex-row justify-center items-center ">            
-            <input type="text" 
-             id="search"
-             name="searchTxt" placeholder="Search for a movie..." class="border rounded-lg p-4">
-             <button class="mx-3 p-3 text-white bg-purple-900 font-bold rounded-lg" onclick="onMovieSearch()">Search</button>
-              <a class="mx-3 p-3 text-white bg-purple-900 font-bold rounded-lg" href="favourite.html"> <i class="fa-regular fa-heart"></i> Favourites</a>
-        </div>
-        <div id="movieGrid" class="grid grid-cols-1  md:grid-cols-4 lg:grid-cols-6"></div>      
+      <div>
+        <h1 class="text-white text-xl font-bold py-3 px-5">Recently Released</h1>
+        <div id="movieRecentGrid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6"></div>
+      </div>
+      <div class="my-4 flex flex-row justify-center items-center">
+        <input type="text" id="search" name="searchTxt" placeholder="Search for a movie..." class="border border-gray-500 rounded-lg p-3" />
+        <button class="mx-3 p-3 text-white bg-purple-900 font-bold rounded-lg" onclick="onMovieSearch()">Search</button>
+        <a class="mx-3 p-3 text-white bg-purple-900 font-bold rounded-lg" href="favourite.html"> <i class="fa-regular fa-heart"></i> Favourites</a>
+      </div>
+      <div id="movieGrid" class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6"></div>
     </main>
-   <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
